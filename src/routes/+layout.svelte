@@ -1,8 +1,6 @@
 <script>
 	import '../styles.css';
 	import { page } from '$app/stores';
-
-	console.log($page.url.pathname);
 </script>
 
 <nav id="navbar">
