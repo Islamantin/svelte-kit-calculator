@@ -15,7 +15,7 @@
 
 <style>
 	#navbar a {
-		width: 225px;
+		width: 200px;
 		font-size: 20px;
 		padding: 20px;
 		border: 1px solid;
@@ -23,6 +23,10 @@
 		text-decoration: none;
 		display: inline-block;
 		color:darkslategray;
+	}
+
+	#navbar a:hover {
+		background-color: #2f4f4f53;
 	}
 
 	#navbar a.active {
@@ -38,7 +42,7 @@
 	}
 
 	#main-container {
-		width: 500px;
+		width: 450px;
 		padding: 20px;
 		margin: auto;
 		margin-top: 10px;

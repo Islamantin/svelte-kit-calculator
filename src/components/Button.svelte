@@ -4,6 +4,7 @@
 	 */
 	export let sign;
 
+    let additionalClass = "";
 	if (Number.parseInt(sign)) {
 	} else {
 		switch (sign) {
@@ -15,11 +16,14 @@
 			break;
             case '/':
 			break;
+            case '=':
+            additionalClass = "wide";
+			break;
 		}
 	}
 </script>
 
-<button>
+<button class={additionalClass}>
 	{sign}
 </button>
 
@@ -35,7 +39,12 @@
         border-radius: 10px;
     }
 
+    button.wide {
+        width: 210px;
+    }
+
     button:hover {
         cursor: pointer;
+        background-color: #d8d8d8;
     }
 </style>
