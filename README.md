@@ -1,6 +1,6 @@
 # SvelteKit Calculator App Example
 
-Simple calculator app with history record. Powered by [`create-svelte`](https://github.com/sveltejs/kit/tree/master/packages/create-svelte).
+Simple calculator app with history record. Powered by [`SvelteKit`](https://kit.svelte.dev).
 
 ## How to run
 
