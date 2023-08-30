@@ -5,6 +5,7 @@
 
 <nav id="navbar">
 	<a href="/actions" class:active={$page.url.pathname.includes('/actions')}>Actions</a>
+	<span />
 	<a href="/history" class:active={$page.url.pathname.includes('/history')}>History</a>
 </nav>
 <main id="main-container">
@@ -12,6 +13,9 @@
 </main>
 
 <style>
+	#navbar span {
+		display: inline-block;
+	}
 	#navbar a {
 		width: 200px;
 		font-size: 20px;
@@ -20,7 +24,7 @@
 		border-radius: 10px;
 		text-decoration: none;
 		display: inline-block;
-		color:darkslategray;
+		color: darkslategray;
 	}
 
 	#navbar a:hover {
@@ -34,8 +38,8 @@
 
 	#navbar {
 		text-align: center;
-		background-color:honeydew;
-		padding: 10px;
+		background-color: honeydew;
+		padding: 20px;
 		border: 1px 1px 1px 0;
 	}
 
@@ -43,9 +47,9 @@
 		width: 450px;
 		padding: 20px;
 		margin: auto;
-		margin-top: 10px;
-		margin-bottom: 10px;
-		background-color:beige;
+		margin-top: 15px;
+		margin-bottom: 15px;
+		background-color: beige;
 		border-radius: 10px;
 	}
 </style>

@@ -1,6 +1,7 @@
 <script>
 	import { scale } from 'svelte/transition';
-	import Button from '../../lib/Button.svelte';
+	import Button from '$lib/Button.svelte'
+	import { HistoryStore } from '../../stores';
 	// generating the numbers range
 	let numbers = Array.from({ length: 10 }, (_, i) => i.toString());
 	// move 0 to the end
@@ -94,21 +95,30 @@
 				switch (operator) {
 					case '-':
 						result = firstValue - secondValue;
-                        break;
+						break;
 					case '*':
 						result = firstValue * secondValue;
-                        break;
+						break;
 					case '/':
 						result = firstValue / secondValue;
-                        break;
+						break;
 					// plus operation
 					default:
 						result = firstValue + secondValue;
-                        break;
+						break;
 				}
-				curCalc.result = result.toString();
-                // save calculation
-				console.log({ ...curCalc });
+				const stringResult = result.toString();
+				curCalc.result = stringResult;
+				// save calculation
+				HistoryStore.update((current) => [
+					{
+						first,
+						second,
+						operator,
+						result: stringResult
+					},
+					...current
+				]);
 				// updating values for the next calculation
 				if (result === 0) {
 					curCalc.first = '0';
